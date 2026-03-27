@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const highlights = [
   "5+ years of professional web development experience",
@@ -13,8 +15,14 @@ export default function About() {
     <section id="about" className="py-20 px-4 md:px-8 bg-[#0F0F1A]">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
-        {/* Left — Visual */}
-        <div className="relative">
+        {/* Left */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative"
+        >
           <div className="bg-[#1A1A2E] border border-white/10 rounded-2xl p-8">
             <div className="grid grid-cols-2 gap-4 mb-6">
               {[
@@ -22,21 +30,29 @@ export default function About() {
                 { value: "80+", label: "Projects Built", color: "#FF6584" },
                 { value: "20+", label: "Courses Created", color: "#68A063" },
                 { value: "4.9★", label: "Average Rating", color: "#F59E0B" },
-              ].map((stat) => (
-                <div
+              ].map((stat, i) => (
+                <motion.div
                   key={stat.label}
-                  className="bg-[#0F0F1A] border border-white/10 rounded-xl p-4 text-center"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-[#0F0F1A] border border-white/10 rounded-xl p-4 text-center cursor-default"
                 >
-                  <div className="text-2xl font-bold mb-1" style={{ color: stat.color }}>
-                    {stat.value}
-                  </div>
+                  <div className="text-2xl font-bold mb-1" style={{ color: stat.color }}>{stat.value}</div>
                   <div className="text-[#A0A0B0] text-xs">{stat.label}</div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
-            {/* Profile */}
-            <div className="flex items-center gap-4 bg-[#0F0F1A] border border-white/10 rounded-xl p-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex items-center gap-4 bg-[#0F0F1A] border border-white/10 rounded-xl p-4"
+            >
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#6C63FF] to-[#FF6584] flex items-center justify-center text-white font-bold text-xl shrink-0">
                 DT
               </div>
@@ -51,15 +67,18 @@ export default function About() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-
-          {/* Glow */}
           <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-[#6C63FF]/10 rounded-full blur-3xl pointer-events-none" />
-        </div>
+        </motion.div>
 
-        {/* Right — Content */}
-        <div>
+        {/* Right */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="text-[#6C63FF] text-sm font-semibold uppercase tracking-widest">About</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
             Your Guide to Modern Web Development
@@ -68,26 +87,34 @@ export default function About() {
             I'm a full-stack web developer and educator passionate about making complex concepts simple. Through practical, project-based teaching, I help developers build real skills that employers actually want.
           </p>
           <p className="text-[#A0A0B0] leading-relaxed mb-8">
-            Every course is built from real-world experience — not just theory. Every template I sell is one I've actually used in production. I believe the best way to learn is by building things that matter.
+            Every course is built from real-world experience — not just theory. Every template I sell is one I've actually used in production.
           </p>
 
-          {/* Highlights */}
           <ul className="space-y-3 mb-8">
-            {highlights.map((item) => (
-              <li key={item} className="flex items-start gap-3">
+            {highlights.map((item, i) => (
+              <motion.li
+                key={item}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex items-start gap-3"
+              >
                 <CheckCircle size={18} className="text-[#6C63FF] shrink-0 mt-0.5" />
                 <span className="text-[#A0A0B0] text-sm">{item}</span>
-              </li>
+              </motion.li>
             ))}
           </ul>
 
-          <Link
-            href="/courses"
-            className="inline-flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
-          >
-            Start Learning Today <ArrowRight size={18} />
-          </Link>
-        </div>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              href="/courses"
+              className="inline-flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-300"
+            >
+              Start Learning Today <ArrowRight size={18} />
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

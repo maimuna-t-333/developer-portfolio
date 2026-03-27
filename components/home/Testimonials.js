@@ -1,4 +1,6 @@
+"use client";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -32,32 +34,44 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 px-4 md:px-8 bg-[#1A1A2E]">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
-        <div className="text-center mb-14">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-14"
+        >
           <span className="text-[#6C63FF] text-sm font-semibold uppercase tracking-widest">Reviews</span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">What Students Say</h2>
           <p className="text-[#A0A0B0] mt-3 max-w-xl mx-auto">
             Join thousands of developers who leveled up their careers.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div
+          {testimonials.map((t, i) => (
+            <motion.div
               key={t.id}
-              className="bg-[#0F0F1A] border border-white/10 hover:border-[#6C63FF]/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
+              whileHover={{ y: -6, borderColor: "rgba(108,99,255,0.4)" }}
+              className="bg-[#0F0F1A] border border-white/10 rounded-2xl p-6 transition-colors duration-300"
             >
-              {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} size={14} className="text-yellow-400" fill="currentColor" />
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Star size={14} className="text-yellow-400" fill="currentColor" />
+                  </motion.div>
                 ))}
               </div>
-
               <p className="text-[#A0A0B0] text-sm leading-relaxed mb-6">"{t.text}"</p>
-
-              {/* Author */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#6C63FF] flex items-center justify-center text-white text-sm font-bold shrink-0">
                   {t.avatar}
@@ -67,12 +81,17 @@ export default function Testimonials() {
                   <div className="text-[#A0A0B0] text-xs">{t.role}</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Overall Rating */}
-        <div className="mt-12 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-12 text-center"
+        >
           <div className="inline-flex items-center gap-3 bg-[#0F0F1A] border border-white/10 rounded-2xl px-8 py-4">
             <div className="text-4xl font-bold text-white">4.9</div>
             <div>
@@ -84,7 +103,7 @@ export default function Testimonials() {
               <div className="text-[#A0A0B0] text-sm">Based on 5,000+ reviews</div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

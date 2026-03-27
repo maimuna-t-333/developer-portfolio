@@ -2,6 +2,7 @@ import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   title: "DevTrainer — Learn Web Development",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <CartProvider>
           <Header />
           <main className="min-h-screen pt-16">
+            <ScrollToTop />
             {children}
           </main>
           <Footer />
