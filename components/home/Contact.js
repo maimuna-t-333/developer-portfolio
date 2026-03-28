@@ -135,8 +135,8 @@ export default function Contact() {
 
             {/* Contact Info Cards */}
             {[
-              { icon: Mail, label: "Email", value: "hello@devtrainer.dev", color: "#6C63FF" },
-              { icon: Phone, label: "Phone", value: "+1 (555) 000-0000", color: "#FF6584" },
+              { icon: Mail, label: "Email", value: "maimuna.tabr@gmail.com", color: "#6C63FF" },
+              { icon: Phone, label: "Phone", value: "01736788394", color: "#FF6584" },
               { icon: MapPin, label: "Location", value: "Available Worldwide (Remote)", color: "#68A063" },
             ].map(({ icon: Icon, label, value, color }) => (
               <div
