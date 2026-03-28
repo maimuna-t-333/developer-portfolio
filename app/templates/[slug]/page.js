@@ -42,7 +42,15 @@ export default function SingleTemplatePage() {
             <p className="text-[#A0A0B0] text-lg leading-relaxed mb-6">{template.description}</p>
 
             <div className="rounded-2xl overflow-hidden border border-white/10 mb-8">
-              <img src={template.image} alt={template.title} className="w-full object-cover" />
+              <img
+                src={template.image}
+                alt={template.title}
+                className="w-full h-full object-cover ..."
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.parentElement.style.background = "linear-gradient(135deg, #1A1A2E, #6C63FF33)";
+                }}
+              />
             </div>
 
             <div className="bg-[#1A1A2E] border border-white/10 rounded-2xl p-6">
@@ -80,11 +88,10 @@ export default function SingleTemplatePage() {
               <button
                 onClick={() => addToCart(template)}
                 disabled={inCart}
-                className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl font-semibold transition-all duration-300 mb-3 ${
-                  inCart
+                className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl font-semibold transition-all duration-300 mb-3 ${inCart
                     ? "bg-green-500/20 text-green-400 cursor-default"
                     : "bg-[#6C63FF] hover:bg-[#5a52d5] text-white hover:scale-105"
-                }`}
+                  }`}
               >
                 <Download size={16} />
                 {inCart ? "Added to Cart" : "Add to Cart"}

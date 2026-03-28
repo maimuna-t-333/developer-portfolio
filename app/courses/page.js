@@ -28,7 +28,11 @@ export default function CoursesPage() {
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover ..."
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                    e.target.parentElement.style.background = "linear-gradient(135deg, #1A1A2E, #6C63FF33)";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] to-transparent" />
                 <div className="absolute top-3 left-3 flex gap-2 flex-wrap">

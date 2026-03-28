@@ -66,7 +66,15 @@ export default function Products() {
               className="product-card opacity-0 group bg-[#1A1A2E] border border-white/10 hover:border-[#6C63FF]/50 rounded-2xl overflow-hidden transition-colors duration-300"
             >
               <div className="relative overflow-hidden h-48">
-                <img src={template.image} alt={template.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img
+                  src={template.image}
+                  alt={template.title}
+                  className="w-full h-full object-cover ..."
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                    e.target.parentElement.style.background = "linear-gradient(135deg, #1A1A2E, #6C63FF33)";
+                  }}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Link href={`/templates/${template.slug}`} className="flex items-center gap-1 bg-white text-[#0F0F1A] text-xs font-semibold px-3 py-2 rounded-lg hover:bg-[#6C63FF] hover:text-white transition-colors">
