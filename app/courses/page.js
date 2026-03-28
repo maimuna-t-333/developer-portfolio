@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import { Clock, Users, Star } from "lucide-react";
 import { courses } from "@/data/courses";
