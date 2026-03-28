@@ -15,5 +15,3 @@ https://your-vercel-link.vercel.app
 - Context API
 - Framer Motion
 - GSAP
-
-👉 এটা ক
