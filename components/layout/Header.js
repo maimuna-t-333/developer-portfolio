@@ -54,7 +54,7 @@ export default function Header() {
           <div className="w-8 h-8 bg-[#6C63FF] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
             <Code2 size={18} className="text-white" />
           </div>
-          <span className="text-white">Dev<span className="text-[#6C63FF]">Trainer</span></span>
+          <span className="text-white">Maimuna<span className="text-[#6C63FF]">Dev</span></span>
         </Link>
 
         {/* Desktop Nav */}

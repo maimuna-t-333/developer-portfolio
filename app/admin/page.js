@@ -60,7 +60,7 @@ export default function AdminPage() {
         {/* Logo */}
         <div className="h-16 flex items-center justify-between px-6 border-b border-white/10">
           <span className="text-white font-bold text-lg">
-            Dev<span className="text-[#6C63FF]">Admin</span>
+            Trainer Dashboard
           </span>
           <button onClick={() => setSidebarOpen(false)} className="lg:hidden text-[#A0A0B0]">
             <X size={20} />

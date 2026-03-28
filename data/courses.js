@@ -2,7 +2,7 @@ const courses = [
   {
     id: "course-react-dev",
     slug: "complete-react-development",
-    title: "Complete React Development",
+    title: "Complete React Development (Build 5 Real Projects)",
     description:
       "Build modern React applications with hooks, routing, state management, and real-world projects.",
     image:
@@ -19,7 +19,7 @@ const courses = [
   {
     id: "course-nextjs-bootcamp",
     slug: "nextjs-fullstack-bootcamp",
-    title: "Next.js Fullstack Bootcamp",
+    title: "Next.js Fullstack Bootcamp (From Beginner to Deployment)",
     description:
       "Learn App Router, server components, authentication, and deployment by shipping fullstack Next.js products.",
     image:
@@ -36,7 +36,7 @@ const courses = [
   {
     id: "course-modern-css",
     slug: "modern-css-mastery",
-    title: "Modern CSS Mastery",
+    title: "Modern CSS Mastery (From Beginner to Advance)",
     description:
       "Master layout systems, animations, responsive design, and component styling with current CSS techniques.",
     image:
@@ -53,7 +53,7 @@ const courses = [
   {
     id: "course-node-express",
     slug: "node-express-api-development",
-    title: "Node & Express API Development",
+    title: "Node & Express API Development (Advance Course)",
     description:
       "Design secure REST APIs with Express, databases, validation, and production-ready backend patterns.",
     image:

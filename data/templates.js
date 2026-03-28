@@ -2,7 +2,7 @@ const templates = [
   {
     id: "template-saas-landing",
     slug: "saas-landing-page",
-    title: "SaaS Landing Page",
+    title: "SaaS Landing Page (High-Converting UI Kit)",
     description:
       "A polished landing page template for SaaS launches with pricing, testimonials, FAQ, and conversion sections.",
     image:
@@ -16,7 +16,7 @@ const templates = [
   {
     id: "template-dev-portfolio",
     slug: "developer-portfolio",
-    title: "Developer Portfolio",
+    title: "Developer Portfolio Template (Modern & Responsive",
     description:
       "A portfolio template built to showcase projects, case studies, skills, and contact details with a strong personal brand.",
     image:

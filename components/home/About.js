@@ -79,15 +79,12 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-[#6C63FF] text-sm font-semibold uppercase tracking-widest">About</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-            Your Guide to Modern Web Development
-          </h2>
-          <p className="text-[#A0A0B0] leading-relaxed mb-6">
-            I'm a full-stack web developer and educator passionate about making complex concepts simple. Through practical, project-based teaching, I help developers build real skills that employers actually want.
-          </p>
-          <p className="text-[#A0A0B0] leading-relaxed mb-8">
-            Every course is built from real-world experience — not just theory. Every template I sell is one I've actually used in production.
+          <span className="text-[#6C63FF] lg:text-3xl text-sm font-semibold uppercase tracking-widest">About Me</span>
+
+          <p>
+            I'm Maimuna Tabassum, a passionate full-stack developer and instructor.
+            I help students learn modern web development through real-world projects
+            and practical learning.
           </p>
 
           <ul className="space-y-3 mb-8">

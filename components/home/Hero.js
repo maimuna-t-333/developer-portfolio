@@ -131,16 +131,12 @@ export default function Hero() {
             <span className="text-[#6C63FF] text-sm font-medium">#1 Web Development Trainer</span>
           </div>
 
-          <h1 ref={titleRef} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 opacity-0">
-            Master{" "}
-            <span className="bg-gradient-to-r from-[#6C63FF] to-[#FF6584] bg-clip-text text-transparent">
-              Modern Web
-            </span>
-            <br />Development
+          <h1 ref={titleRef} className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 opacity-0">
+             Learn Full-Stack Web Development with Real Projects
           </h1>
 
           <p ref={subtitleRef} className="text-[#A0A0B0] text-lg leading-relaxed mb-8 max-w-lg opacity-0">
-            Learn React, Next.js, Node.js and more with hands-on projects. Download premium templates to kickstart your builds faster.
+            I'm Maimuna Tabassum — helping aspiring developers master React, Next.js, and backend development through practical courses.
           </p>
 
           <div ref={statsRef} className="flex gap-8 mb-8">
@@ -203,7 +199,7 @@ export default function Hero() {
               <span className="text-[#6C63FF]">{"<div>"}</span>
               {"\n      "}
               <span className="text-[#6C63FF]">{"<h1>"}</span>
-              <span className="text-green-400">Hello World 🚀</span>
+              <span className="text-green-400">Build Your First React App</span>
               <span className="text-[#6C63FF]">{"</h1>"}</span>
               {"\n    "}
               <span className="text-[#6C63FF]">{"</div>"}</span>
@@ -229,7 +225,7 @@ export default function Hero() {
             className="absolute -bottom-6 -left-6 bg-[#1A1A2E] border border-white/10 rounded-xl px-4 py-3 shadow-lg cursor-default"
           >
             <div className="text-xs text-[#A0A0B0] mb-1">Next lesson</div>
-            <div className="text-white text-sm font-semibold">React Hooks Deep Dive</div>
+            <div className="text-white text-sm font-semibold">Next Lesson: React Hooks in Real Projects</div>
           </motion.div>
         </div>
       </div>

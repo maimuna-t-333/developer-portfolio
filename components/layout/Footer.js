@@ -73,7 +73,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-[#6C63FF] rounded-lg flex items-center justify-center">
                 <Code2 size={18} className="text-white" />
               </div>
-              <span className="text-white">Dev<span className="text-[#6C63FF]">Trainer</span></span>
+              <span className="text-white">Maimuna Dev — Full-Stack Web Development Training & Resources</span>
             </Link>
             <p className="text-[#A0A0B0] text-sm leading-relaxed mb-6 max-w-xs">
               Learn modern web development with hands-on courses and download professional templates to accelerate your projects.

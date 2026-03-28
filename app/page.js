@@ -4,6 +4,7 @@ import Courses from "@/components/home/Courses";
 import Products from "@/components/home/Products";
 import Testimonials from "@/components/home/Testimonials";
 import About from "@/components/home/About";
+import Contact from "@/components/home/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Products/>
       <Testimonials/>
       <About/>
+      <Contact></Contact>
     </>
   );
 }
