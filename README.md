@@ -1,5 +1,5 @@
 ## 🔗 Live Link
-https://developer-portfolio-omega-sandy.vercel.app/
+https://developer-portfolio-v86v.vercel.app/
 
 ## 📦 Features
 - Trainer portfolio website
