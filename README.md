@@ -1,5 +1,5 @@
 ## 🔗 Live Link
-https://developer-portfolio-v86v.vercel.app/
+https://developer-portfolio-wuig.vercel.app/
 
 ## 📦 Features
 - Trainer portfolio website
