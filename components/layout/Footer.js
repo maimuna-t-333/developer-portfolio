@@ -115,7 +115,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[#A0A0B0] text-sm">
-            © 2025 DevTrainer. All rights reserved.
+            © 2026 DevTrainer. All rights reserved.
           </p>
           <p className="text-[#A0A0B0] text-sm">
             Built with <span className="text-[#6C63FF]">Next.js</span> & <span className="text-[#6C63FF]">Tailwind CSS</span>
