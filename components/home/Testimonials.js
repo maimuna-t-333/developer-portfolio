@@ -31,7 +31,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 px-4 md:px-8 bg-[#1A1A2E]">
+    <section id="testimonials" className="py-20 px-3 sm:px-4 md:px-8 bg-[#1A1A2E]">
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -92,10 +92,10 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
           className="mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-3 bg-[#0F0F1A] border border-white/10 rounded-2xl px-8 py-4">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-[#0F0F1A] border border-white/10 rounded-2xl px-5 sm:px-8 py-4 text-center sm:text-left max-w-full">
             <div className="text-4xl font-bold text-white">4.9</div>
             <div>
-              <div className="flex gap-1 mb-1">
+              <div className="flex justify-center sm:justify-start gap-1 mb-1">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} size={16} className="text-yellow-400" fill="currentColor" />
                 ))}

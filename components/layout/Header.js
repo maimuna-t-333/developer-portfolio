@@ -47,14 +47,14 @@ export default function Header() {
           : "bg-[#0F0F1A]/80 backdrop-blur-md border-b border-white/10"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-3 sm:px-5 md:px-8 flex items-center justify-between h-16">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl group">
+        <Link href="/" className="flex items-center gap-2 font-bold text-lg sm:text-xl group min-w-0">
           <div className="w-8 h-8 bg-[#6C63FF] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
             <Code2 size={18} className="text-white" />
           </div>
-          <span className="text-white">Maimuna<span className="text-[#6C63FF]">Dev</span></span>
+          <span className="text-white truncate">Maimuna<span className="text-[#6C63FF]">Dev</span></span>
         </Link>
 
         {/* Desktop Nav */}
@@ -72,7 +72,7 @@ export default function Header() {
         </nav>
 
         {/* Right */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-3">
           <Link href="/cart" className="relative p-2 text-[#A0A0B0] hover:text-white transition-colors">
             <ShoppingCart size={20} />
             {cartItems.length > 0 && (
@@ -87,7 +87,7 @@ export default function Header() {
           <Link href="/courses" className="hidden md:block text-sm bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-4 py-1.5 rounded-lg font-medium transition-all duration-200 hover:scale-105">
             Get Started
           </Link>
-          <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
+          <button className="md:hidden text-white p-2 -mr-2" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>

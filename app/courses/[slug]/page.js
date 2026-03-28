@@ -83,7 +83,7 @@ export default function SingleCoursePage() {
 
           <div className="lg:col-span-1">
             <div className="sticky top-24 bg-[#1A1A2E] border border-white/10 rounded-2xl p-6">
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex flex-wrap items-center gap-3 mb-2">
                 <span className="text-3xl font-bold text-white">${course.price}</span>
                 <span className="text-[#A0A0B0] line-through">${course.originalPrice}</span>
                 <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-md font-medium">

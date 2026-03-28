@@ -96,7 +96,7 @@ export default function CheckoutPage() {
               onSubmit={handlePlaceOrder}
               className="lg:col-span-2 bg-[#1A1A2E] border border-white/10 rounded-3xl p-6 md:p-8"
             >
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-start sm:items-center gap-3 mb-8">
                 <div className="w-11 h-11 rounded-xl bg-[#6C63FF]/20 flex items-center justify-center">
                   <CreditCard className="text-[#6C63FF]" size={20} />
                 </div>
@@ -204,13 +204,13 @@ export default function CheckoutPage() {
                     key={item.id}
                     className="flex items-start justify-between gap-4 border-b border-white/10 pb-4"
                   >
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="text-white font-medium">{item.title}</h3>
                       <p className="text-sm text-[#A0A0B0]">
                         {item.category || item.level || "Digital Product"}
                       </p>
                     </div>
-                    <span className="text-white font-semibold">${item.price}</span>
+                    <span className="text-white font-semibold shrink-0">${item.price}</span>
                   </div>
                 ))}
               </div>

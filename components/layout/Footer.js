@@ -68,17 +68,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
 
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 font-bold text-xl mb-4">
+          <div className="lg:col-span-2 min-w-0">
+            <Link href="/" className="flex items-start sm:items-center gap-3 font-bold text-lg sm:text-xl mb-4 min-w-0">
               <div className="w-8 h-8 bg-[#6C63FF] rounded-lg flex items-center justify-center">
                 <Code2 size={18} className="text-white" />
               </div>
               <span className="text-white">Maimuna Dev — Full-Stack Web Development Training & Resources</span>
             </Link>
-            <p className="text-[#A0A0B0] text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-[#A0A0B0] text-sm leading-relaxed mb-6 max-w-md">
               Learn modern web development with hands-on courses and download professional templates to accelerate your projects.
             </p>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {socials.map(({ svg, href, label }) => (
                 <a  // ✅ Added missing opening <a> tag
                   key={label}
@@ -113,7 +113,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-4 text-center md:text-left">
           <p className="text-[#A0A0B0] text-sm">
             © 2026 DevTrainer. All rights reserved.
           </p>

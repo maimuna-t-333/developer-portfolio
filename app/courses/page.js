@@ -5,7 +5,7 @@ import { courses } from "@/data/courses";
 
 export default function CoursesPage() {
   return (
-    <div className="min-h-screen bg-[#0F0F1A] py-20 px-4 md:px-8">
+    <div className="min-h-screen bg-[#0F0F1A] py-20 px-3 md:px-8">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}

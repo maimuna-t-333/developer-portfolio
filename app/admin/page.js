@@ -159,7 +159,7 @@ export default function AdminPage() {
 
               {/* Revenue Chart Placeholder */}
               <div className="bg-[#1A1A2E] border border-white/10 rounded-2xl p-6 mb-8">
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
                   <h2 className="text-white font-bold">Revenue Overview</h2>
                   <select className="bg-white/5 border border-white/10 text-[#A0A0B0] text-sm rounded-lg px-3 py-1.5 outline-none">
                     <option>Last 7 days</option>
@@ -184,7 +184,7 @@ export default function AdminPage() {
 
               {/* Recent Orders */}
               <div className="bg-[#1A1A2E] border border-white/10 rounded-2xl p-6">
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
                   <h2 className="text-white font-bold">Recent Orders</h2>
                   <button onClick={() => setActiveTab("orders")} className="text-[#6C63FF] text-sm hover:underline">
                     View All
@@ -225,9 +225,9 @@ export default function AdminPage() {
           {/* Courses Tab */}
           {activeTab === "courses" && (
             <div>
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
                 <h1 className="text-2xl font-bold text-white">Manage Courses</h1>
-                <button className="flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors">
+                <button className="inline-flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors self-start sm:self-auto">
                   <Plus size={16} /> Add Course
                 </button>
               </div>
@@ -280,9 +280,9 @@ export default function AdminPage() {
           {/* Templates Tab */}
           {activeTab === "templates" && (
             <div>
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
                 <h1 className="text-2xl font-bold text-white">Manage Templates</h1>
-                <button className="flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors">
+                <button className="inline-flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors self-start sm:self-auto">
                   <Plus size={16} /> Add Template
                 </button>
               </div>

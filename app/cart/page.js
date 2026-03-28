@@ -80,11 +80,11 @@ export default function CartPage() {
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 bg-[#1A1A2E] border border-white/10 rounded-3xl p-6 md:p-8">
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
               <h2 className="text-white text-2xl font-bold">Cart Items</h2>
               <button
                 onClick={clearCart}
-                className="text-sm text-red-400 hover:text-red-300 transition-colors"
+                className="text-sm text-red-400 hover:text-red-300 transition-colors self-start sm:self-auto"
               >
                 Clear All
               </button>
@@ -126,7 +126,7 @@ export default function CartPage() {
                       </button>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between">
+                    <div className="mt-4 flex items-center justify-between gap-3">
                       <span className="text-[#A0A0B0] text-sm">Qty: 1</span>
                       <span className="text-white text-lg font-bold">${item.price}</span>
                     </div>
@@ -147,7 +147,7 @@ export default function CartPage() {
             <div className="mb-6">
               <label className="block text-sm text-white mb-2">Promo Code</label>
 
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="text"
                   value={coupon}
@@ -157,7 +157,7 @@ export default function CartPage() {
                 />
                 <button
                   onClick={applyCoupon}
-                  className="bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-4 rounded-xl transition-all hover:scale-105"
+                  className="bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-4 py-2.5 rounded-xl transition-all hover:scale-105"
                 >
                   Apply
                 </button>

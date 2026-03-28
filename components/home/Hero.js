@@ -101,7 +101,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0F0F1A]">
+    <section ref={heroRef} className="relative min-h-0 sm:min-h-[calc(100svh-4rem)] md:min-h-screen flex items-start md:items-center justify-center overflow-hidden bg-[#0F0F1A]">
 
       {/* Orbs */}
       <div ref={orb1Ref} className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#6C63FF]/20 rounded-full blur-[120px] pointer-events-none" />
@@ -122,24 +122,24 @@ export default function Hero() {
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(108,99,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(108,99,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 md:px-8 py-20 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-8 pt-6 pb-8 sm:pt-7 sm:pb-12 md:pt-16 md:pb-20 grid lg:grid-cols-2 gap-8 sm:gap-9 lg:gap-16 items-center">
 
         {/* Left */}
-        <div>
-          <div className="hero-badge inline-flex items-center gap-2 bg-[#6C63FF]/10 border border-[#6C63FF]/30 rounded-full px-4 py-1.5 mb-6 opacity-0">
+        <div className="w-full">
+          <div className="hero-badge inline-flex items-center gap-2 bg-[#6C63FF]/10 border border-[#6C63FF]/30 rounded-full px-3.5 sm:px-4 py-1.5 mb-5 md:mb-6 opacity-0">
             <Star size={14} className="text-[#6C63FF]" fill="#6C63FF" />
-            <span className="text-[#6C63FF] text-sm font-medium">#1 Web Development Trainer</span>
+            <span className="text-[#6C63FF] text-xs sm:text-sm font-medium">#1 Web Development Trainer</span>
           </div>
 
-          <h1 ref={titleRef} className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 opacity-0">
+          <h1 ref={titleRef} className="text-[2.1rem] sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.05] sm:leading-tight mb-5 md:mb-6 opacity-0">
              Learn Full-Stack Web Development with Real Projects
           </h1>
 
-          <p ref={subtitleRef} className="text-[#A0A0B0] text-lg leading-relaxed mb-8 max-w-lg opacity-0">
+          <p ref={subtitleRef} className="text-[#A0A0B0] text-[0.98rem] md:text-lg leading-relaxed mb-6 md:mb-8 opacity-0">
             I'm Maimuna Tabassum — helping aspiring developers master React, Next.js, and backend development through practical courses.
           </p>
 
-          <div ref={statsRef} className="flex gap-8 mb-8">
+          <div ref={statsRef} className="grid grid-cols-3 gap-4 sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-4 md:gap-8 mb-6 md:mb-8 w-full">
             {[
               { value: "5K+", label: "Students" },
               { value: "20+", label: "Courses" },
@@ -150,20 +150,20 @@ export default function Hero() {
                 whileHover={{ scale: 1.1 }}
                 className="cursor-default opacity-0"
               >
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
+                <div className="text-[1.85rem] sm:text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-[#A0A0B0] text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
 
-          <div ref={ctaRef} className="flex flex-wrap gap-4">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="opacity-0">
-              <Link href="/courses" className="flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-6 py-3 rounded-xl font-semibold transition-colors">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="opacity-0 w-full sm:w-auto">
+              <Link href="/courses" className="flex w-full sm:w-auto items-center justify-center gap-2 bg-[#6C63FF] hover:bg-[#5a52d5] text-white px-6 py-3 rounded-xl font-semibold transition-colors">
                 Explore Courses <ArrowRight size={18} />
               </Link>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="opacity-0">
-              <Link href="/templates" className="flex items-center gap-2 border border-white/20 hover:border-[#6C63FF] text-white px-6 py-3 rounded-xl font-semibold transition-colors hover:bg-white/5">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="opacity-0 w-full sm:w-auto">
+              <Link href="/templates" className="flex w-full sm:w-auto items-center justify-center gap-2 border border-white/20 hover:border-[#6C63FF] text-white px-6 py-3 rounded-xl font-semibold transition-colors hover:bg-white/5">
                 <Play size={18} className="text-[#6C63FF]" /> Browse Templates
               </Link>
             </motion.div>

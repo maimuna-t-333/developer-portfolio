@@ -44,7 +44,7 @@ export default function Courses() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 md:px-8 bg-[#1A1A2E]">
+    <section ref={sectionRef} className="py-20 px-3 sm:px-4 md:px-8 bg-[#1A1A2E]">
       <div className="max-w-7xl mx-auto">
 
         <div className="courses-heading opacity-0 flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">

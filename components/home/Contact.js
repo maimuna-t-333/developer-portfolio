@@ -110,7 +110,7 @@ export default function Contact() {
     } rounded-xl px-4 py-3 text-white text-sm outline-none transition-all duration-200 placeholder:text-[#A0A0B0] focus:bg-white/8`;
 
   return (
-    <section id="contact" ref={sectionRef} className="py-20 px-4 md:px-8 bg-[#1A1A2E]">
+    <section id="contact" ref={sectionRef} className="py-20 px-3 sm:px-4 md:px-8 bg-[#1A1A2E]">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
